@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1o3xnhy22lj4"]
+
+[ext_resource type="Script" uid="uid://dbsncv1cykcvl" path="res://scripts/jugador_principal.gd" id="1_57oki"]
+
+[node name="Jugador_Principal" type="CharacterBody2D"]
+script = ExtResource("1_57oki")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
