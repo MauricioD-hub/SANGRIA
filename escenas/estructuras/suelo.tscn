@@ -3,15 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://d3imw1j0heb47" path="res://assets/Environment/Structures/Buildings/Floors.png" id="1_0sr3o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0sr3o"]
-size = Vector2(96, 18)
+size = Vector2(98, 40)
 
 [node name="suelo" type="StaticBody2D"]
 
 [node name="Floors" type="Sprite2D" parent="."]
-position = Vector2(223.5, -18)
+position = Vector2(371, 146)
 scale = Vector2(2.1175, 0.84)
 texture = ExtResource("1_0sr3o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-149, -177)
+position = Vector2(-1, -2)
 shape = SubResource("RectangleShape2D_0sr3o")
