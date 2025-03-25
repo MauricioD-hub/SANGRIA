@@ -1,10 +1,76 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1o3xnhy22lj4"]
+[gd_scene load_steps=12 format=3 uid="uid://b1o3xnhy22lj4"]
 
 [ext_resource type="Script" uid="uid://dbsncv1cykcvl" path="res://scripts/jugador_principal.gd" id="1_57oki"]
+[ext_resource type="Texture2D" uid="uid://b6qiis2seys3u" path="res://assets/Entities/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="2_md7p4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frndq"]
+atlas = ExtResource("2_md7p4")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47c43"]
+atlas = ExtResource("2_md7p4")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kodmw"]
+atlas = ExtResource("2_md7p4")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxkw1"]
+atlas = ExtResource("2_md7p4")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snqo6"]
+atlas = ExtResource("2_md7p4")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01jij"]
+atlas = ExtResource("2_md7p4")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfdu2"]
+atlas = ExtResource("2_md7p4")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1cly"]
+atlas = ExtResource("2_md7p4")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t2hlf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frndq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47c43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kodmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxkw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snqo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01jij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfdu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1cly")
+}],
+"loop": true,
+"name": &"Walk_front",
+"speed": 8.0
+}]
 
 [node name="Jugador_Principal" type="CharacterBody2D"]
 script = ExtResource("1_57oki")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t2hlf")
+animation = &"Walk_front"
+frame_progress = 0.0603405

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://2yrsgdq7yiiw"]
+
+[ext_resource type="PackedScene" uid="uid://b1o3xnhy22lj4" path="res://escenas/personajes/jugador_principal.tscn" id="1_lc2bi"]
+[ext_resource type="PackedScene" uid="uid://bo4blj117xc5h" path="res://escenas/estructuras/suelo.tscn" id="1_vku8i"]
+
+[node name="nivel1" type="Node2D"]
+
+[node name="Jugador_Principal" parent="." instance=ExtResource("1_lc2bi")]
+position = Vector2(145, 322)
+
+[node name="Camera2D" type="Camera2D" parent="Jugador_Principal"]
+position = Vector2(-145, -322)
+
+[node name="suelos" type="Node2D" parent="."]
+position = Vector2(-43, -6)
+
+[node name="suelo" parent="suelos" instance=ExtResource("1_vku8i")]
+position = Vector2(311, 619)
+
+[node name="suelo2" parent="suelos" instance=ExtResource("1_vku8i")]
+position = Vector2(498, 567)
+
+[node name="suelo3" parent="suelos" instance=ExtResource("1_vku8i")]
+position = Vector2(-468, 1328)
+rotation = 3.14159
+scale = Vector2(9.96624, -5.31652)
